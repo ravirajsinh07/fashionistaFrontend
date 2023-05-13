@@ -26,7 +26,7 @@ export class CheckoutComponent implements OnInit {
     "amount": "200",
     "name": "Fashionista India",
     "description": "Fashionista E-Commerce Payment",
-    "image": "https://www.abhijitgatade.com/assets/img/favicon.png",
+    "image": "https://images.unsplash.com/photo-1683976729293-77f4091e3730?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80",
     "order_id": "",
     "handler": function (response: any) {
       var event = new CustomEvent("payment.success",
