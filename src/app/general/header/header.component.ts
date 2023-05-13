@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { CartService } from '../cart.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,7 @@ export class HeaderComponent implements OnInit {
   categories:any;
   @Input() cartcount = 0;
 
-  constructor(private api:ApiService, private router:Router, private cartService:CartService) { }
+  constructor(private api:ApiService, private router:Router, private cartService:CartService,private location: Location) { }
 
   ngOnInit(): void {
     this.cartService.currentProductCount.subscribe(count => this.cartcount = count);
@@ -40,6 +41,10 @@ export class HeaderComponent implements OnInit {
     });
 
   }
+  refreshPage() {
+    window.location.replace("/")
+  }
+
 
   logout(){
     localStorage.clear();
