@@ -4,9 +4,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+/* The ApiService class is used to make HTTP POST requests to a specified base URL with JSON data. */
 export class ApiService {
 
-  baseurl = "http://44.203.139.58:8081/";
+  baseurl = "http://3.88.182.229:8081/";
   // baseurl = "http://localhost:8081/";
 
   constructor(private http:HttpClient) { }

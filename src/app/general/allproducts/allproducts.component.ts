@@ -24,6 +24,7 @@ export class AllproductsComponent implements OnInit{
     this.bind();
 
   }
+  /* The `bind()` function is making two API calls using the `api` service. */
   bind(){
     this.api.post("productcategory/get", {data:{id:this.categoryid}}).subscribe((result:any)=>{
       this.category = result.data;

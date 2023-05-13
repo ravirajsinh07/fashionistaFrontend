@@ -24,6 +24,12 @@ export class AdminloginComponent implements OnInit {
     )
   }
 
+  /**
+   * The function handles the submission of login data for an admin user and redirects to the admin
+   * dashboard if successful, otherwise displays an error message.
+   *  - The data parameter is an object that contains the username and password
+   * entered by the user for the login process.
+   */
   onClickSubmit(data:any){
     this.api.post("admin/login", {data:data}).subscribe((result:any)=>{
       console.log(result);
